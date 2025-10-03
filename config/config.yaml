@@ -1,0 +1,140 @@
+# AI DAO Hedge Fund Configuration
+
+# Trading Environment
+environment:
+  initial_balance: 100000.0
+  transaction_cost: 0.001  # 0.1%
+  slippage: 0.0005  # 0.05%
+  max_position_size: 0.3  # 30% of portfolio
+  leverage: 1.0
+
+# Market Data
+data:
+  assets:
+    - AAPL
+    - MSFT
+    - GOOGL
+    - TSLA
+    - BTC-USD
+    - ETH-USD
+  start_date: "2020-01-01"
+  end_date: "2025-01-01"
+  timeframe: "1d"
+
+# RL Training
+training:
+  total_timesteps: 1000000
+  eval_freq: 10000
+  save_freq: 50000
+  n_eval_episodes: 10
+  learning_rate: 0.0003
+  batch_size: 256
+  buffer_size: 100000
+
+# Agents
+agents:
+  momentum:
+    algorithm: "PPO"
+    policy: "MlpPolicy"
+    gamma: 0.99
+    n_steps: 2048
+    lookback_period: 20
+    indicators:
+      - RSI
+      - MACD
+      - SMA_20
+      - SMA_50
+      - BB_upper
+      - BB_lower
+
+  arbitrage:
+    algorithm: "DQN"
+    policy: "MlpPolicy"
+    gamma: 0.95
+    exploration_fraction: 0.3
+    min_spread_threshold: 0.002
+
+  hedging:
+    algorithm: "SAC"
+    policy: "MlpPolicy"
+    gamma: 0.99
+    tau: 0.005
+    target_var: 0.15
+    max_portfolio_var: 0.25
+
+# Multi-Agent Coordination
+coordination:
+  ensemble_method: "weighted_voting"
+  rebalance_frequency: "daily"
+  conflict_resolution: "dao_vote"
+  meta_learner:
+    enabled: true
+    model: "LSTM"
+    hidden_size: 128
+
+# Blockchain/DAO
+blockchain:
+  network: "sepolia"  # testnet
+  rpc_url: "https://sepolia.infura.io/v3/YOUR_API_KEY"
+  dao_address: null  # Will be set after deployment
+  treasury_address: null
+  governance:
+    voting_period: 259200  # 3 days in seconds
+    quorum: 0.1  # 10%
+    proposal_threshold: 100  # tokens needed to propose
+
+# Explainability
+explainability:
+  shap_samples: 100
+  explanation_frequency: "per_trade"
+  generate_reports: true
+  attention_visualization: true
+
+# Dashboard
+dashboard:
+  host: "0.0.0.0"
+  port: 8050
+  debug: true
+  update_interval: 5000  # milliseconds
+
+# API
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  redis_url: "redis://localhost:6379"
+
+# Backtesting
+backtest:
+  train_test_split: 0.8
+  walk_forward:
+    enabled: true
+    train_period: 365
+    test_period: 90
+  monte_carlo_runs: 1000
+
+# Performance Metrics
+metrics:
+  risk_free_rate: 0.02
+  benchmark: "^GSPC"  # S&P 500
+  report_metrics:
+    - sharpe_ratio
+    - sortino_ratio
+    - max_drawdown
+    - calmar_ratio
+    - win_rate
+    - profit_factor
+    - total_return
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/ai_dao.log"
+
+# Paths
+paths:
+  data_dir: "data"
+  models_dir: "models"
+  results_dir: "simulations/results"
+  plots_dir: "simulations/plots"
