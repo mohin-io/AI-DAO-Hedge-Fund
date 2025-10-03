@@ -1,0 +1,29 @@
+{
+  "name": "ai-dao-hedge-fund-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for AI DAO Hedge Fund",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:mumbai": "hardhat run scripts/deploy.js --network mumbai",
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "clean": "hardhat clean"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "dao",
+    "defi",
+    "smart-contracts"
+  ],
+  "author": "mohin-io",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "hardhat": "^2.19.0",
+    "dotenv": "^16.3.1"
+  }
+}
