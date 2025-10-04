@@ -175,25 +175,35 @@ st.markdown("""
         background: transparent;
     }
 
+    /* UNIVERSAL SIDEBAR TEXT - FORCE WHITE ON EVERYTHING */
+    section[data-testid="stSidebar"],
+    section[data-testid="stSidebar"] * {
+        color: #ffffff !important;
+    }
+
     /* Sidebar text color fixes - enhanced for maximum visibility */
     section[data-testid="stSidebar"] .stMarkdown {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stSidebar"] .stMarkdown * {
         color: #ffffff !important;
     }
 
     section[data-testid="stSidebar"] h1,
     section[data-testid="stSidebar"] h2,
     section[data-testid="stSidebar"] h3,
-    section[data-testid="stSidebar"] h4 {
+    section[data-testid="stSidebar"] h4,
+    section[data-testid="stSidebar"] h5,
+    section[data-testid="stSidebar"] h6 {
         color: #ffffff !important;
     }
 
-    section[data-testid="stSidebar"] p {
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] div,
+    section[data-testid="stSidebar"] label {
         color: #ffffff !important;
-    }
-
-    /* Ensure all regular text in sidebar is white, but preserve inline styles */
-    section[data-testid="stSidebar"] div:not([style*="background"]):not([style*="gradient"]) {
-        color: #ffffff;
     }
 
     /* Radio button styling for better visibility */
