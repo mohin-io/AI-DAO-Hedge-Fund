@@ -166,13 +166,84 @@ st.markdown("""
         color: #ffa500;
     }
 
-    /* Sidebar styling */
+    /* Enhanced Sidebar styling with better contrast */
     section[data-testid="stSidebar"] {
         background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
     }
 
     section[data-testid="stSidebar"] > div {
         background: transparent;
+    }
+
+    /* Sidebar text color fixes */
+    section[data-testid="stSidebar"] .stMarkdown {
+        color: #e0e0e0;
+    }
+
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] h4 {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stSidebar"] p {
+        color: #cbd5e0;
+    }
+
+    /* Radio button styling for better visibility */
+    section[data-testid="stSidebar"] .stRadio > label {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        margin: 0.3rem 0;
+        border-left: 3px solid transparent;
+        transition: all 0.3s ease;
+        color: #ffffff !important;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+
+    section[data-testid="stSidebar"] .stRadio > label:hover {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.25) 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    section[data-testid="stSidebar"] .stRadio > label[data-baseweb="radio"] > div:first-child {
+        background-color: rgba(102, 126, 234, 0.3) !important;
+        border-color: #667eea !important;
+    }
+
+    /* Selected radio button */
+    section[data-testid="stSidebar"] .stRadio > label:has(input:checked) {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-left-color: #00ff00;
+        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+        font-weight: 600;
+    }
+
+    /* Radio button text color */
+    section[data-testid="stSidebar"] .stRadio label span {
+        color: #ffffff !important;
+        font-size: 0.95rem;
+    }
+
+    /* Metrics in sidebar - enhanced contrast */
+    section[data-testid="stSidebar"] [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+        font-size: 1.3rem !important;
+    }
+
+    section[data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+        color: #cbd5e0 !important;
+        font-weight: 600 !important;
+    }
+
+    section[data-testid="stSidebar"] [data-testid="stMetricDelta"] {
+        color: #00ff00 !important;
     }
 
     /* Info boxes */
@@ -241,6 +312,213 @@ st.markdown("""
         width: 40px;
         height: 40px;
         animation: spin 1s linear infinite;
+    }
+
+    /* Main content area improvements */
+    .main .block-container {
+        padding: 2rem 3rem;
+        max-width: 1400px;
+    }
+
+    /* Enhanced headers in main content */
+    .main h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    .main h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .main h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Enhanced dividers */
+    .main hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #667eea, transparent);
+        margin: 2rem 0;
+    }
+
+    /* Better spacing for sections */
+    .element-container {
+        margin-bottom: 1rem;
+    }
+
+    /* Enhanced download buttons */
+    .main .stDownloadButton > button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .main .stDownloadButton > button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+
+    /* Enhanced regular buttons */
+    .main .stButton > button {
+        border-radius: 10px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .main .stButton > button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Enhanced plotly charts */
+    .js-plotly-plot {
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    /* Enhanced dataframe tables */
+    .stDataFrame {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Better input fields */
+    .stTextInput > div > div > input,
+    .stNumberInput > div > div > input,
+    .stSelectbox > div > div > div {
+        border-radius: 8px;
+        border: 2px solid rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .stTextInput > div > div > input:focus,
+    .stNumberInput > div > div > input:focus,
+    .stSelectbox > div > div > div:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    }
+
+    /* Enhanced expanders */
+    .streamlit-expanderHeader {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        border-radius: 10px;
+        font-weight: 600;
+        color: #667eea;
+    }
+
+    /* Enhanced checkbox/toggle */
+    .stCheckbox > label {
+        color: #333;
+        font-weight: 500;
+    }
+
+    /* Improved slider */
+    .stSlider > div > div > div {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    }
+
+    /* Better file uploader */
+    .stFileUploader {
+        border-radius: 12px;
+        border: 2px dashed rgba(102, 126, 234, 0.5);
+        padding: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    .stFileUploader:hover {
+        border-color: #667eea;
+        background: rgba(102, 126, 234, 0.05);
+    }
+
+    /* Enhanced success/error/warning messages */
+    .stSuccess {
+        background: linear-gradient(135deg, rgba(0, 255, 0, 0.1) 0%, rgba(0, 200, 0, 0.1) 100%);
+        border-left: 4px solid #00ff00;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .stError {
+        background: linear-gradient(135deg, rgba(245, 87, 108, 0.1) 0%, rgba(245, 87, 108, 0.05) 100%);
+        border-left: 4px solid #f5576c;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .stWarning {
+        background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
+        border-left: 4px solid #ffa500;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    .stInfo {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        border-left: 4px solid #667eea;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    /* Smooth page transitions */
+    .main > div {
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Remove default Streamlit branding for cleaner look */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #764ba2 0%, #667eea 100%);
     }
 </style>
 """, unsafe_allow_html=True)
