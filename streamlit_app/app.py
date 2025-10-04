@@ -245,24 +245,49 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Sidebar navigation with enhanced UI
+# Enhanced Professional Sidebar Header
 st.sidebar.markdown("""
-<div style="text-align: center; padding: 1.5rem 0;">
-    <h1 style="margin: 0; font-size: 2.5rem;">🤖⛓️📈</h1>
-    <h2 style="margin: 0.5rem 0; font-size: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">AI DAO Fund</h2>
-    <p style="margin: 0; font-size: 0.85rem; opacity: 0.7; color: #cbd5e0;">Live Interactive Demo</p>
+<div style="text-align: center; padding: 2rem 0 1rem 0; background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%); margin: -1rem -1rem 1rem -1rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
+    <div style="font-size: 3rem; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.3));">🤖⛓️📈</div>
+    <h2 style="margin: 0; font-size: 1.6rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; letter-spacing: -0.5px;">AI DAO Fund</h2>
+    <div style="margin-top: 0.3rem; font-size: 0.75rem; opacity: 0.6; color: #cbd5e0; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Live Trading System</div>
 </div>
 """, unsafe_allow_html=True)
 
-# Live status indicator
+# Enhanced Live Status Badge with Animation
 st.sidebar.markdown("""
-<div style="text-align: center; margin: 1rem 0; padding: 1rem; background: rgba(0, 255, 0, 0.1); border-radius: 12px; border: 2px solid rgba(0, 255, 0, 0.3); box-shadow: 0 4px 15px rgba(0, 255, 0, 0.2);">
-    <span class="live-indicator"></span>
-    <strong style="color: #00ff00; font-size: 1rem;">SYSTEM LIVE</strong>
+<div style="margin: 0 0 1.5rem 0;">
+    <div style="background: linear-gradient(135deg, rgba(0, 255, 0, 0.15) 0%, rgba(0, 200, 0, 0.15) 100%);
+                border-radius: 16px;
+                border: 2px solid rgba(0, 255, 0, 0.4);
+                box-shadow: 0 4px 20px rgba(0, 255, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                padding: 0.8rem;
+                text-align: center;
+                position: relative;
+                overflow: hidden;">
+        <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent); animation: shimmer 3s infinite;"></div>
+        <div style="position: relative; z-index: 1;">
+            <span class="live-indicator" style="vertical-align: middle;"></span>
+            <strong style="color: #00ff00; font-size: 0.95rem; vertical-align: middle; text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);">SYSTEM OPERATIONAL</strong>
+        </div>
+        <div style="margin-top: 0.4rem; font-size: 0.7rem; opacity: 0.7; color: #00ff00;">All Systems Active</div>
+    </div>
 </div>
+
+<style>
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+</style>
 """, unsafe_allow_html=True)
 
-st.sidebar.markdown("### 📍 Navigation")
+# Navigation Section Header
+st.sidebar.markdown("""
+<div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">📍 Navigation</div>
+</div>
+""", unsafe_allow_html=True)
 
 page = st.sidebar.radio(
     "Select Page",
@@ -280,66 +305,219 @@ page = st.sidebar.radio(
     label_visibility="collapsed"
 )
 
-# Quick stats in sidebar
-st.sidebar.markdown("---")
-st.sidebar.markdown("### 📈 Quick Stats")
-
-col1, col2 = st.sidebar.columns(2)
-with col1:
-    st.metric("Portfolio", "$1.25M", "+3.5%", delta_color="normal")
-with col2:
-    st.metric("Daily P&L", "$8.2K", "+0.66%", delta_color="normal")
-
-st.sidebar.metric("Active Agents", "3/3", "100%", delta_color="normal")
-
-# System status in sidebar
-st.sidebar.markdown("---")
-st.sidebar.markdown("### ⚙️ System Status")
+# Enhanced Quick Stats Section
 st.sidebar.markdown("""
-<div style="font-size: 0.85rem; line-height: 1.8;">
-    <div style="margin: 0.3rem 0;">✅ <strong>AI Agents:</strong> <span style="color: #00ff00;">Operational</span></div>
-    <div style="margin: 0.3rem 0;">✅ <strong>Blockchain:</strong> <span style="color: #00ff00;">Connected</span></div>
-    <div style="margin: 0.3rem 0;">✅ <strong>Data Feed:</strong> <span style="color: #00ff00;">Live</span></div>
-    <div style="margin: 0.3rem 0;">✅ <strong>Risk Limits:</strong> <span style="color: #00ff00;">Normal</span></div>
+<div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">📈 Quick Stats</div>
 </div>
 """, unsafe_allow_html=True)
 
-# Performance snapshot
-st.sidebar.markdown("---")
-st.sidebar.markdown("### 🎯 Performance")
+# Professional metric cards
 st.sidebar.markdown("""
-<div class="sidebar-metric">
-    <div style="font-size: 0.75rem; opacity: 0.8;">Sharpe Ratio</div>
-    <div style="font-size: 1.3rem; font-weight: 700; color: #667eea;">2.14</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+                border-radius: 10px;
+                padding: 0.8rem;
+                border-left: 3px solid #667eea;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px;">Portfolio</div>
+        <div style="font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$1.25M</div>
+        <div style="font-size: 0.7rem; color: #00cc00; margin-top: 0.2rem;">▲ +3.5%</div>
+    </div>
+    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+                border-radius: 10px;
+                padding: 0.8rem;
+                border-left: 3px solid #764ba2;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px;">Daily P&L</div>
+        <div style="font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$8.2K</div>
+        <div style="font-size: 0.7rem; color: #00cc00; margin-top: 0.2rem;">▲ +0.66%</div>
+    </div>
 </div>
-<div class="sidebar-metric">
-    <div style="font-size: 0.75rem; opacity: 0.8;">Max Drawdown</div>
-    <div style="font-size: 1.3rem; font-weight: 700; color: #f5576c;">-12.3%</div>
-</div>
-<div class="sidebar-metric">
-    <div style="font-size: 0.75rem; opacity: 0.8;">Win Rate</div>
-    <div style="font-size: 1.3rem; font-weight: 700; color: #00ff00;">67.8%</div>
+
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            border-radius: 10px;
+            padding: 0.8rem;
+            border-left: 3px solid #00ff00;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.5rem;">
+    <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px;">Active Agents</div>
+    <div style="font-size: 1.3rem; font-weight: 800; color: #00ff00;">3/3</div>
+    <div style="font-size: 0.7rem; color: #00cc00; margin-top: 0.2rem;">✓ All Operational</div>
 </div>
 """, unsafe_allow_html=True)
 
-# Footer with timestamp
-st.sidebar.markdown("---")
+# Enhanced System Status Section
+st.sidebar.markdown("""
+<div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">⚙️ System Health</div>
+</div>
+""", unsafe_allow_html=True)
+
+st.sidebar.markdown("""
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
+        <span style="font-size: 1.2rem; margin-right: 0.5rem;">🤖</span>
+        <div style="flex: 1;">
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">AI Agents</div>
+            <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● OPERATIONAL</div>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
+        <span style="font-size: 1.2rem; margin-right: 0.5rem;">⛓️</span>
+        <div style="flex: 1;">
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">Blockchain</div>
+            <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● CONNECTED</div>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
+        <span style="font-size: 1.2rem; margin-right: 0.5rem;">📡</span>
+        <div style="flex: 1;">
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">Data Feed</div>
+            <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● LIVE</div>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
+        <span style="font-size: 1.2rem; margin-right: 0.5rem;">🛡️</span>
+        <div style="flex: 1;">
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">Risk Limits</div>
+            <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● NORMAL</div>
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Enhanced Performance Metrics Section
+st.sidebar.markdown("""
+<div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">🎯 Performance</div>
+</div>
+""", unsafe_allow_html=True)
+
+st.sidebar.markdown("""
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 12px;
+            padding: 0.8rem;
+            margin-bottom: 0.6rem;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Sharpe Ratio</div>
+            <div style="font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2.14</div>
+        </div>
+        <div style="font-size: 2rem; opacity: 0.3;">📈</div>
+    </div>
+    <div style="margin-top: 0.4rem; font-size: 0.65rem; opacity: 0.6;">Institutional Grade</div>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(245, 87, 108, 0.1) 0%, rgba(245, 87, 108, 0.05) 100%);
+            border-radius: 12px;
+            padding: 0.8rem;
+            margin-bottom: 0.6rem;
+            border-left: 4px solid #f5576c;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Max Drawdown</div>
+            <div style="font-size: 1.8rem; font-weight: 900; color: #f5576c;">-12.3%</div>
+        </div>
+        <div style="font-size: 2rem; opacity: 0.3;">📉</div>
+    </div>
+    <div style="margin-top: 0.4rem; font-size: 0.65rem; opacity: 0.6;">Low Risk Profile</div>
+</div>
+
+<div style="background: linear-gradient(135deg, rgba(0, 255, 0, 0.1) 0%, rgba(0, 200, 0, 0.05) 100%);
+            border-radius: 12px;
+            padding: 0.8rem;
+            margin-bottom: 0.6rem;
+            border-left: 4px solid #00ff00;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <div style="font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Win Rate</div>
+            <div style="font-size: 1.8rem; font-weight: 900; color: #00ff00;">67.8%</div>
+        </div>
+        <div style="font-size: 2rem; opacity: 0.3;">🎯</div>
+    </div>
+    <div style="margin-top: 0.4rem; font-size: 0.65rem; opacity: 0.6;">Above Average</div>
+</div>
+""", unsafe_allow_html=True)
+
+# Enhanced Footer Section
+st.sidebar.markdown("""
+<div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">⏰ System Info</div>
+</div>
+""", unsafe_allow_html=True)
+
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 st.sidebar.markdown(f"""
-<div style='text-align: center; font-size: 0.75rem; opacity: 0.6; color: #cbd5e0;'>
-    <div style="margin-bottom: 0.5rem;">⏰ Last Updated</div>
-    <div style="font-weight: 600;">{current_time}</div>
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            text-align: center;">
+    <div style="font-size: 0.65rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Last Updated</div>
+    <div style="font-weight: 700; font-size: 0.8rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Courier New', monospace;">{current_time}</div>
 </div>
 """, unsafe_allow_html=True)
 
-st.sidebar.markdown("---")
+# Professional Footer Links
 st.sidebar.markdown("""
-<div style="text-align: center; font-size: 0.75rem; opacity: 0.7;">
-    <div style="margin: 0.5rem 0;">
-        <a href="https://github.com/mohin-io/AI-DAO-Hedge-Fund" target="_blank" style="color: #667eea; text-decoration: none;">GitHub</a> |
-        <a href="https://github.com/mohin-io/AI-DAO-Hedge-Fund/blob/master/README.md" target="_blank" style="color: #667eea; text-decoration: none;">Docs</a>
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            border: 1px solid rgba(102, 126, 234, 0.2);">
+    <div style="margin-bottom: 0.8rem;">
+        <a href="https://github.com/mohin-io/AI-DAO-Hedge-Fund" target="_blank"
+           style="display: inline-block;
+                  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                  color: white;
+                  text-decoration: none;
+                  padding: 0.5rem 1rem;
+                  border-radius: 8px;
+                  font-size: 0.75rem;
+                  font-weight: 600;
+                  margin: 0.2rem;
+                  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+                  transition: transform 0.2s ease;">
+            📂 GitHub
+        </a>
+        <a href="https://github.com/mohin-io/AI-DAO-Hedge-Fund/blob/master/README.md" target="_blank"
+           style="display: inline-block;
+                  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+                  color: white;
+                  text-decoration: none;
+                  padding: 0.5rem 1rem;
+                  border-radius: 8px;
+                  font-size: 0.75rem;
+                  font-weight: 600;
+                  margin: 0.2rem;
+                  box-shadow: 0 2px 8px rgba(118, 75, 162, 0.3);
+                  transition: transform 0.2s ease;">
+            📖 Docs
+        </a>
     </div>
-    <div style="margin-top: 0.5rem; opacity: 0.5;">v1.0.0</div>
+    <div style="font-size: 0.65rem; opacity: 0.5; margin-top: 0.5rem;">
+        <span style="background: rgba(102, 126, 234, 0.2); padding: 0.2rem 0.5rem; border-radius: 4px; font-family: 'Courier New', monospace;">v1.0.0</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# Branding footer
+st.sidebar.markdown("""
+<div style="text-align: center; padding: 0.8rem 0; margin-top: 0.5rem; opacity: 0.4; font-size: 0.65rem; border-top: 1px solid rgba(102, 126, 234, 0.1);">
+    <div style="margin-bottom: 0.2rem;">Powered by</div>
+    <div style="font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Multi-Agent RL & Blockchain</div>
 </div>
 """, unsafe_allow_html=True)
 
