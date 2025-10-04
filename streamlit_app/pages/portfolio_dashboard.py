@@ -41,7 +41,7 @@ def render():
     st.markdown("---")
 
     # Key Metrics Row
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         st.metric(
@@ -75,11 +75,38 @@ def render():
             delta_color="inverse"
         )
 
-    with col5:
+    # Second row of metrics
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
         st.metric(
             label="Win Rate",
-            value="58.3%",
+            value="67.8%",
             delta="+2.1%",
+            delta_color="normal"
+        )
+
+    with col2:
+        st.metric(
+            label="Active Agents",
+            value="3/3",
+            delta="All Operational",
+            delta_color="off"
+        )
+
+    with col3:
+        st.metric(
+            label="Total Trades",
+            value="1,247",
+            delta="+42 today",
+            delta_color="normal"
+        )
+
+    with col4:
+        st.metric(
+            label="Avg Trade Duration",
+            value="4.2 hrs",
+            delta="-0.3 hrs",
             delta_color="normal"
         )
 
