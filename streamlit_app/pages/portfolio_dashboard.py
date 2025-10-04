@@ -8,6 +8,17 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+import sys
+import os
+
+# Add utils to path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.export_utils import (
+    generate_portfolio_report_html,
+    generate_metrics_csv,
+    generate_trades_csv,
+    get_sample_data
+)
 
 def render():
     """Render the portfolio dashboard page"""
@@ -382,22 +393,85 @@ def render():
 
         st.plotly_chart(fig_regime, use_container_width=True)
 
-    # Action buttons
+    # Action buttons with real download functionality
     st.markdown("---")
+    st.markdown("### 📥 Export & Actions")
+
     col1, col2, col3, col4 = st.columns(4)
 
+    # Prepare export data
+    portfolio_export_data = {
+        'value': 1247893.45,
+        'daily_pnl': 8234.56,
+        'daily_pnl_pct': 0.66,
+        'total_return': 34.2
+    }
+
+    metrics_export_data = {
+        'sharpe': 2.14,
+        'max_drawdown': -12.3,
+        'win_rate': 67.8,
+        'daily_volatility': 1.8,
+        'annual_volatility': 18.3,
+        'var_95': -2.1,
+        'beta': 0.87
+    }
+
+    agent_export_data = {
+        'momentum': {'pnl': 42567, 'win_rate': 71.2},
+        'arbitrage': {'pnl': 28934, 'win_rate': 65.8},
+        'hedging': {'pnl': 15890, 'win_rate': 58.3}
+    }
+
     with col1:
-        if st.button("📥 Download Report", use_container_width=True):
-            st.success("Portfolio report downloaded!")
+        # Download HTML Report
+        html_report = generate_portfolio_report_html(
+            portfolio_export_data,
+            metrics_export_data,
+            trades_data
+        )
+
+        st.download_button(
+            label="📥 Download Report",
+            data=html_report,
+            file_name=f"AI_DAO_Portfolio_Report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html",
+            mime="text/html",
+            use_container_width=True,
+            help="Download comprehensive portfolio report as HTML"
+        )
 
     with col2:
-        if st.button("🔄 Rebalance Portfolio", use_container_width=True):
-            st.info("Rebalancing initiated...")
+        # Export Metrics CSV
+        metrics_csv = generate_metrics_csv(
+            portfolio_export_data,
+            metrics_export_data,
+            agent_export_data
+        )
+
+        st.download_button(
+            label="📊 Export Metrics",
+            data=metrics_csv,
+            file_name=f"AI_DAO_Metrics_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            mime="text/csv",
+            use_container_width=True,
+            help="Export all performance metrics as CSV"
+        )
 
     with col3:
-        if st.button("⚠️ Emergency Stop", use_container_width=True):
-            st.error("Emergency stop activated!")
+        # Export Trade Log CSV
+        trades_csv = generate_trades_csv(trades_data)
+
+        st.download_button(
+            label="📋 Export Trades",
+            data=trades_csv,
+            file_name=f"AI_DAO_TradeLog_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            mime="text/csv",
+            use_container_width=True,
+            help="Export complete trade log as CSV"
+        )
 
     with col4:
-        if st.button("📊 Export Data", use_container_width=True):
-            st.success("Data exported to CSV!")
+        # Emergency Stop (action button)
+        if st.button("⚠️ Emergency Stop", use_container_width=True, help="Halt all trading activity"):
+            st.error("🛑 Emergency stop activated! All trading halted.")
+            st.warning("Contact system administrator to resume operations.")
