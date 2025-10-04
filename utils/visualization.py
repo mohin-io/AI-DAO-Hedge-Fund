@@ -123,7 +123,7 @@ class PerformanceVisualizer:
             hovermode='x unified',
             template='plotly_white',
             height=400
-        ))
+        )
 
         # Save
         save_path = self.output_dir / save_name

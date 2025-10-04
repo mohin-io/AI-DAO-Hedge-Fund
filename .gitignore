@@ -79,3 +79,10 @@ secrets/
 *.key
 *.pem
 wallet.json
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/*.local
+
+# Claude Code
+.claude/

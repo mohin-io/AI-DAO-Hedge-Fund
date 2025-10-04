@@ -87,9 +87,10 @@ contract TreasuryManager {
         address agentAddress,
         uint256 initialAllocation
     ) external onlyGovernance returns (uint256) {
-        require(initialAllocation <= BASIS_POINTS, "Allocation too high");
+        require(initialAllocation <= BASIS_POINTS, "Allocation must be <= 100%");
 
-        uint256 agentId = agentCount++;
+        agentCount++;
+        uint256 agentId = agentCount;
 
         agents[agentId] = Agent({
             name: name,
@@ -113,7 +114,7 @@ contract TreasuryManager {
      * @param status New status
      */
     function setAgentStatus(uint256 agentId, bool status) external onlyGovernance {
-        require(agentId < agentCount, "Invalid agent ID");
+        require(agentId > 0 && agentId <= agentCount, "Agent does not exist");
         agents[agentId].isActive = status;
         emit AgentStatusChanged(agentId, status);
     }
@@ -127,8 +128,8 @@ contract TreasuryManager {
         external
         onlyGovernance
     {
-        require(agentId < agentCount, "Invalid agent ID");
-        require(newAllocation <= BASIS_POINTS, "Allocation too high");
+        require(agentId > 0 && agentId <= agentCount, "Agent does not exist");
+        require(newAllocation <= BASIS_POINTS, "Allocation must be <= 100%");
 
         agents[agentId].allocation = newAllocation;
         emit AllocationUpdated(agentId, newAllocation);
@@ -139,9 +140,9 @@ contract TreasuryManager {
      * @param agentId ID of the agent
      * @param pnl Profit/Loss in basis points (can be negative)
      */
-    function recordTrade(uint256 agentId, int256 pnl) external onlyAdmin notStopped {
-        require(agentId < agentCount, "Invalid agent ID");
-        require(agents[agentId].isActive, "Agent not active");
+    function recordTrade(uint256 agentId, int256 pnl) external onlyGovernance notStopped {
+        require(agentId > 0 && agentId <= agentCount, "Agent does not exist");
+        require(agents[agentId].isActive, "Agent is not active");
 
         agents[agentId].totalTrades++;
         agents[agentId].totalPnL += pnl;
@@ -160,7 +161,7 @@ contract TreasuryManager {
      * @dev Investor deposits funds
      */
     function deposit() external payable notStopped {
-        require(msg.value > 0, "Must deposit positive amount");
+        require(msg.value > 0, "Deposit must be > 0");
 
         uint256 shares;
         if (totalShares == 0) {
@@ -185,7 +186,7 @@ contract TreasuryManager {
      */
     function withdraw(uint256 shareAmount) external notStopped {
         require(investors[msg.sender].shares >= shareAmount, "Insufficient shares");
-        require(shareAmount > 0, "Must withdraw positive amount");
+        require(shareAmount > 0, "Shares must be > 0");
 
         uint256 assetAmount = (shareAmount * totalAssets) / totalShares;
 
@@ -237,7 +238,7 @@ contract TreasuryManager {
         int256 totalPnL,
         int256 avgPnLPerTrade
     ) {
-        require(agentId < agentCount, "Invalid agent ID");
+        require(agentId > 0 && agentId <= agentCount, "Agent does not exist");
         Agent memory agent = agents[agentId];
 
         int256 avgPnL = agent.totalTrades > 0 ?
@@ -278,7 +279,7 @@ contract TreasuryManager {
      */
     function getTotalAllocation() external view returns (uint256) {
         uint256 total = 0;
-        for (uint256 i = 0; i < agentCount; i++) {
+        for (uint256 i = 1; i <= agentCount; i++) {
             if (agents[i].isActive) {
                 total += agents[i].allocation;
             }
@@ -289,7 +290,7 @@ contract TreasuryManager {
     /**
      * @dev Emergency stop mechanism
      */
-    function activateEmergencyStop() external onlyGovernance {
+    function activateEmergencyStop() external onlyAdmin {
         emergencyStop = true;
         emit EmergencyStopActivated(block.timestamp);
     }
@@ -298,8 +299,8 @@ contract TreasuryManager {
      * @dev Update performance fee
      * @param newFee New fee in basis points
      */
-    function setPerformanceFee(uint256 newFee) external onlyGovernance {
-        require(newFee <= 3000, "Fee too high"); // Max 30%
+    function setPerformanceFee(uint256 newFee) external onlyAdmin {
+        require(newFee <= 5000, "Fee must be <= 50%"); // Max 50%
         performanceFee = newFee;
     }
 
@@ -307,9 +308,35 @@ contract TreasuryManager {
      * @dev Update management fee
      * @param newFee New fee in basis points
      */
-    function setManagementFee(uint256 newFee) external onlyGovernance {
-        require(newFee <= 500, "Fee too high"); // Max 5%
+    function setManagementFee(uint256 newFee) external onlyAdmin {
+        require(newFee <= 1000, "Fee must be <= 10%"); // Max 10%
         managementFee = newFee;
+    }
+
+    /**
+     * @dev Get share price (assets per share)
+     */
+    function getSharePrice() external view returns (uint256) {
+        if (totalShares == 0) return 1e18; // 1:1 for first deposit
+        return (totalAssets * 1e18) / totalShares;
+    }
+
+    /**
+     * @dev Get agent PnL
+     * @param agentId ID of the agent
+     */
+    function getAgentPnL(uint256 agentId) external view returns (int256) {
+        require(agentId > 0 && agentId <= agentCount, "Agent does not exist");
+        return agents[agentId].totalPnL;
+    }
+
+    /**
+     * @dev Update governance address
+     * @param newGovernance New governance contract address
+     */
+    function setGovernance(address newGovernance) external onlyAdmin {
+        require(newGovernance != address(0), "Invalid governance address");
+        governance = newGovernance;
     }
 
     /**

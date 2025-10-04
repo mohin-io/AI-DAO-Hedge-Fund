@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
@@ -61,6 +61,8 @@ contract DeFiIntegration is ReentrancyGuard, Ownable {
     event ProtocolConfigured(Protocol indexed protocol, Chain indexed chain, address router, address pool);
     event PositionOpened(bytes32 indexed positionId, address indexed user, Protocol protocol, uint256 amount);
     event PositionClosed(bytes32 indexed positionId, address indexed user, uint256 amount, uint256 yield);
+
+    constructor() Ownable(msg.sender) {}
     event YieldHarvested(bytes32 indexed positionId, uint256 yieldAmount);
     event Rebalanced(Protocol fromProtocol, Protocol toProtocol, uint256 amount);
 

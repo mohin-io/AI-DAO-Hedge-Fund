@@ -79,7 +79,7 @@ contract AgentRegistry {
             modelHash: modelHash,
             owner: msg.sender,
             stakedAmount: msg.value,
-            reputationScore: 100, // Start with neutral score
+            reputationScore: 0, // Start at zero
             isVerified: false,
             registeredAt: block.timestamp
         });
@@ -95,7 +95,7 @@ contract AgentRegistry {
      */
     function stake() external payable {
         require(isRegistered[msg.sender], "Not registered");
-        require(msg.value > 0, "Must stake positive amount");
+        require(msg.value > 0, "Stake must be > 0");
 
         agents[msg.sender].stakedAmount += msg.value;
         emit AgentStaked(msg.sender, msg.value);
@@ -107,6 +107,7 @@ contract AgentRegistry {
      */
     function unstake(uint256 amount) external {
         require(isRegistered[msg.sender], "Not registered");
+        require(amount > 0, "Amount must be > 0");
         require(agents[msg.sender].stakedAmount >= amount, "Insufficient stake");
         require(
             agents[msg.sender].stakedAmount - amount >= minStake,
@@ -265,7 +266,15 @@ contract AgentRegistry {
      * @param count Number of agents to return
      */
     function getTopAgents(uint256 count) external view returns (address[] memory) {
-        require(count <= registeredAgents.length, "Count too large");
+        // If count exceeds registered agents, return all
+        if (count > registeredAgents.length) {
+            count = registeredAgents.length;
+        }
+
+        // Handle empty case
+        if (registeredAgents.length == 0) {
+            return new address[](0);
+        }
 
         // Simple bubble sort for top reputation scores
         address[] memory sortedAgents = new address[](registeredAgents.length);
@@ -273,13 +282,16 @@ contract AgentRegistry {
             sortedAgents[i] = registeredAgents[i];
         }
 
-        for (uint256 i = 0; i < sortedAgents.length - 1; i++) {
-            for (uint256 j = 0; j < sortedAgents.length - i - 1; j++) {
-                if (agents[sortedAgents[j]].reputationScore <
-                    agents[sortedAgents[j + 1]].reputationScore) {
-                    address temp = sortedAgents[j];
-                    sortedAgents[j] = sortedAgents[j + 1];
-                    sortedAgents[j + 1] = temp;
+        // Only sort if we have more than 1 agent
+        if (sortedAgents.length > 1) {
+            for (uint256 i = 0; i < sortedAgents.length - 1; i++) {
+                for (uint256 j = 0; j < sortedAgents.length - i - 1; j++) {
+                    if (agents[sortedAgents[j]].reputationScore <
+                        agents[sortedAgents[j + 1]].reputationScore) {
+                        address temp = sortedAgents[j];
+                        sortedAgents[j] = sortedAgents[j + 1];
+                        sortedAgents[j + 1] = temp;
+                    }
                 }
             }
         }
@@ -297,5 +309,48 @@ contract AgentRegistry {
      */
     function setMinStake(uint256 newMinStake) external onlyGovernance {
         minStake = newMinStake;
+    }
+
+    /**
+     * @dev Update reputation score manually (governance only)
+     * @param agentAddress Address of agent
+     * @param newScore New reputation score (0-1000)
+     */
+    function updateReputation(address agentAddress, uint256 newScore) external onlyGovernance {
+        require(isRegistered[agentAddress], "Agent not registered");
+        require(newScore <= 1000, "Score must be <= 1000");
+        agents[agentAddress].reputationScore = newScore;
+        emit ReputationUpdated(agentAddress, newScore);
+    }
+
+    /**
+     * @dev Get registered agents list
+     */
+    function getRegisteredAgents() external view returns (address[] memory) {
+        return registeredAgents;
+    }
+
+    /**
+     * @dev Get performance history without limit
+     */
+    function getPerformanceHistory(address agentAddress) external view returns (PerformanceSnapshot[] memory) {
+        return performanceHistory[agentAddress];
+    }
+
+    /**
+     * @dev Update governance address
+     */
+    function setGovernance(address newGovernance) external onlyGovernance {
+        require(newGovernance != address(0), "Invalid governance address");
+        governance = newGovernance;
+    }
+
+    /**
+     * @dev Update model hash (agent owner only)
+     */
+    function updateModelHash(string memory newHash) external {
+        require(isRegistered[msg.sender], "Not registered");
+        require(agents[msg.sender].owner == msg.sender, "Only agent owner");
+        agents[msg.sender].modelHash = newHash;
     }
 }

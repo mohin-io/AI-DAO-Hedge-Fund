@@ -4,6 +4,7 @@ Uses PPO algorithm to follow market trends
 """
 
 import numpy as np
+from typing import Optional
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.vec_env import DummyVecEnv

@@ -98,7 +98,7 @@ contract DAOGovernance {
      * @param proposalType Type of proposal
      * @param data Encoded data for execution
      */
-    function createProposal(
+    function propose(
         string memory description,
         ProposalType proposalType,
         bytes memory data
@@ -108,7 +108,8 @@ contract DAOGovernance {
             "Insufficient voting power to propose"
         );
 
-        uint256 proposalId = proposalCount++;
+        proposalCount++;
+        uint256 proposalId = proposalCount;
         Proposal storage proposal = proposals[proposalId];
 
         proposal.id = proposalId;
@@ -132,10 +133,11 @@ contract DAOGovernance {
      * @param support True for yes, false for no
      */
     function castVote(uint256 proposalId, bool support) external notPaused {
+        require(proposalId > 0 && proposalId <= proposalCount, "Proposal does not exist");
         Proposal storage proposal = proposals[proposalId];
-
+        require(!proposal.canceled, "Proposal is canceled");
         require(block.timestamp >= proposal.startTime, "Voting not started");
-        require(block.timestamp <= proposal.endTime, "Voting ended");
+        require(block.timestamp <= proposal.endTime, "Voting period has ended");
         require(!proposal.hasVoted[msg.sender], "Already voted");
         require(votingPower[msg.sender] > 0, "No voting power");
 
@@ -158,9 +160,9 @@ contract DAOGovernance {
     function executeProposal(uint256 proposalId) external notPaused {
         Proposal storage proposal = proposals[proposalId];
 
-        require(block.timestamp > proposal.endTime, "Voting not ended");
-        require(!proposal.executed, "Already executed");
-        require(!proposal.canceled, "Proposal canceled");
+        require(block.timestamp > proposal.endTime, "Voting period has not ended");
+        require(!proposal.executed, "Proposal already executed");
+        require(!proposal.canceled, "Proposal is canceled");
 
         // Check quorum and majority
         uint256 totalVotes = proposal.forVotes + proposal.againstVotes;
@@ -168,7 +170,7 @@ contract DAOGovernance {
             totalVotes * 100 >= totalVotingPower * quorum,
             "Quorum not reached"
         );
-        require(proposal.forVotes > proposal.againstVotes, "Proposal rejected");
+        require(proposal.forVotes > proposal.againstVotes, "Proposal did not pass");
 
         proposal.executed = true;
 
@@ -187,10 +189,10 @@ contract DAOGovernance {
 
         require(
             msg.sender == proposal.proposer || msg.sender == admin,
-            "Not authorized"
+            "Only proposer can cancel"
         );
-        require(!proposal.executed, "Already executed");
-        require(block.timestamp <= proposal.endTime, "Voting ended");
+        require(!proposal.executed, "Proposal already executed");
+        require(block.timestamp <= proposal.endTime, "Voting period has ended");
 
         proposal.canceled = true;
         emit ProposalCanceled(proposalId);
@@ -265,4 +267,14 @@ contract DAOGovernance {
         require(newQuorum > 0 && newQuorum <= 100, "Invalid quorum");
         quorum = newQuorum;
     }
+
+    /**
+     * @dev Update proposal threshold
+     * @param newThreshold New minimum voting power required to create proposals
+     */
+    function setProposalThreshold(uint256 newThreshold) external onlyAdmin {
+        require(newThreshold > 0, "Threshold must be > 0");
+        proposalThreshold = newThreshold;
+    }
+
 }

@@ -6,6 +6,7 @@ import Agents from './pages/Agents';
 import Governance from './pages/Governance';
 import Portfolio from './pages/Portfolio';
 import Analytics from './pages/Analytics';
+import LiveDashboard from './pages/LiveDashboard';
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ function App() {
           <main className="container mx-auto px-4 py-8">
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/live" element={<LiveDashboard />} />
               <Route path="/agents" element={<Agents />} />
               <Route path="/governance" element={<Governance />} />
               <Route path="/portfolio" element={<Portfolio />} />

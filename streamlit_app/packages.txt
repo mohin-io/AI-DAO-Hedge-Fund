@@ -1,0 +1,8 @@
+# System-level packages required for Streamlit Cloud deployment
+# These are installed via apt-get
+
+# For numerical computing
+libgomp1
+
+# For scientific computing
+libopenblas-dev
