@@ -554,8 +554,8 @@ st.markdown("""
 st.sidebar.markdown("""
 <div style="text-align: center; padding: 2rem 0 1rem 0; background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%); margin: -1rem -1rem 1rem -1rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
     <div style="font-size: 3rem; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.3));">🤖⛓️📈</div>
-    <h2 style="margin: 0; font-size: 1.6rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; letter-spacing: -0.5px;">AI DAO Fund</h2>
-    <div style="margin-top: 0.3rem; font-size: 0.75rem; opacity: 0.6; color: #cbd5e0; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Live Trading System</div>
+    <h2 style="margin: 0; font-size: 1.6rem; color: #ffffff; font-weight: 900; letter-spacing: -0.5px;">AI DAO Fund</h2>
+    <div style="margin-top: 0.3rem; font-size: 0.75rem; color: #ffffff; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Live Trading System</div>
 </div>
 """, unsafe_allow_html=True)
 

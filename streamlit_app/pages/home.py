@@ -13,42 +13,42 @@ def render():
     st.markdown('<h1 class="main-header">🤖⛓️📈 AI DAO Hedge Fund</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Decentralized Autonomous Hedge Fund powered by Multi-Agent RL and Blockchain DAO</p>', unsafe_allow_html=True)
 
-    # Quick stats
+    # Quick stats with consistent sizing
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         st.markdown("""
-        <div class="metric-card">
-            <h3 style="margin: 0;">Portfolio Value</h3>
-            <h2 style="margin: 0.5rem 0;">$1,247,893</h2>
-            <p style="margin: 0; opacity: 0.8;">+34.2% Total Return</p>
+        <div class="metric-card" style="padding: 1.8rem; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between;">
+            <h3 style="margin: 0; font-size: 0.9rem; opacity: 0.7;">Portfolio Value</h3>
+            <h2 style="margin: 0.8rem 0; font-size: 2rem; font-weight: 800;">$1,247,893</h2>
+            <p style="margin: 0; opacity: 0.8; font-size: 0.85rem;">+34.2% Total Return</p>
         </div>
         """, unsafe_allow_html=True)
 
     with col2:
         st.markdown("""
-        <div class="metric-card">
-            <h3 style="margin: 0;">Sharpe Ratio</h3>
-            <h2 style="margin: 0.5rem 0;">2.14</h2>
-            <p style="margin: 0; opacity: 0.8;">Institutional Grade</p>
+        <div class="metric-card" style="padding: 1.8rem; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between;">
+            <h3 style="margin: 0; font-size: 0.9rem; opacity: 0.7;">Sharpe Ratio</h3>
+            <h2 style="margin: 0.8rem 0; font-size: 2rem; font-weight: 800;">2.14</h2>
+            <p style="margin: 0; opacity: 0.8; font-size: 0.85rem;">Institutional Grade</p>
         </div>
         """, unsafe_allow_html=True)
 
     with col3:
         st.markdown("""
-        <div class="metric-card">
-            <h3 style="margin: 0;">Max Drawdown</h3>
-            <h2 style="margin: 0.5rem 0;">-12.3%</h2>
-            <p style="margin: 0; opacity: 0.8;">Low Risk Profile</p>
+        <div class="metric-card" style="padding: 1.8rem; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between;">
+            <h3 style="margin: 0; font-size: 0.9rem; opacity: 0.7;">Max Drawdown</h3>
+            <h2 style="margin: 0.8rem 0; font-size: 2rem; font-weight: 800;">-12.3%</h2>
+            <p style="margin: 0; opacity: 0.8; font-size: 0.85rem;">Low Risk Profile</p>
         </div>
         """, unsafe_allow_html=True)
 
     with col4:
         st.markdown("""
-        <div class="metric-card">
-            <h3 style="margin: 0;">Active Agents</h3>
-            <h2 style="margin: 0.5rem 0;">3/3</h2>
-            <p style="margin: 0; opacity: 0.8;">All Operational</p>
+        <div class="metric-card" style="padding: 1.8rem; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between;">
+            <h3 style="margin: 0; font-size: 0.9rem; opacity: 0.7;">Active Agents</h3>
+            <h2 style="margin: 0.8rem 0; font-size: 2rem; font-weight: 800;">3/3</h2>
+            <p style="margin: 0; opacity: 0.8; font-size: 0.85rem;">All Operational</p>
         </div>
         """, unsafe_allow_html=True)
 
