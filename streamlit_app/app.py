@@ -563,7 +563,7 @@ st.sidebar.markdown("""
 # Navigation Section Header
 st.sidebar.markdown("""
 <div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
-    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">📍 Navigation</div>
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #ffffff; opacity: 0.9;">📍 Navigation</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -586,7 +586,7 @@ page = st.sidebar.radio(
 # Enhanced Quick Stats Section
 st.sidebar.markdown("""
 <div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
-    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">📈 Quick Stats</div>
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #ffffff; opacity: 0.9;">📈 Quick Stats</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -598,7 +598,7 @@ st.sidebar.markdown("""
                 padding: 0.8rem;
                 border-left: 3px solid #667eea;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
-        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px;">Portfolio</div>
+        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff;">Portfolio</div>
         <div style="font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$1.25M</div>
         <div style="font-size: 0.7rem; color: #00cc00; margin-top: 0.2rem;">▲ +3.5%</div>
     </div>
@@ -607,7 +607,7 @@ st.sidebar.markdown("""
                 padding: 0.8rem;
                 border-left: 3px solid #764ba2;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
-        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px;">Daily P&L</div>
+        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff;">Daily P&L</div>
         <div style="font-size: 1.1rem; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$8.2K</div>
         <div style="font-size: 0.7rem; color: #00cc00; margin-top: 0.2rem;">▲ +0.66%</div>
     </div>
@@ -619,8 +619,8 @@ st.sidebar.markdown("""
             border-left: 3px solid #00ff00;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 0.5rem;">
-    <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px;">Active Agents</div>
-    <div style="font-size: 1.3rem; font-weight: 800; color: #00ff00;">3/3</div>
+    <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff;">Active Agents</div>
+    <div style="font-size: 1.1rem; font-weight: 800; color: #00ff00;">3/3</div>
     <div style="font-size: 0.7rem; color: #00cc00; margin-top: 0.2rem;">✓ All Operational</div>
 </div>
 """, unsafe_allow_html=True)
@@ -628,7 +628,7 @@ st.sidebar.markdown("""
 # Enhanced System Status Section
 st.sidebar.markdown("""
 <div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
-    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">⚙️ System Health</div>
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #ffffff; opacity: 0.9;">⚙️ System Health</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -641,28 +641,28 @@ st.sidebar.markdown("""
     <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
         <span style="font-size: 1.2rem; margin-right: 0.5rem;">🤖</span>
         <div style="flex: 1;">
-            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">AI Agents</div>
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9; color: #ffffff;">AI Agents</div>
             <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● OPERATIONAL</div>
         </div>
     </div>
     <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
         <span style="font-size: 1.2rem; margin-right: 0.5rem;">⛓️</span>
         <div style="flex: 1;">
-            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">Blockchain</div>
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9; color: #ffffff;">Blockchain</div>
             <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● CONNECTED</div>
         </div>
     </div>
     <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
         <span style="font-size: 1.2rem; margin-right: 0.5rem;">📡</span>
         <div style="flex: 1;">
-            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">Data Feed</div>
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9; color: #ffffff;">Data Feed</div>
             <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● LIVE</div>
         </div>
     </div>
     <div style="display: flex; align-items: center; margin: 0.5rem 0; padding: 0.4rem; background: rgba(0, 255, 0, 0.05); border-radius: 6px;">
         <span style="font-size: 1.2rem; margin-right: 0.5rem;">🛡️</span>
         <div style="flex: 1;">
-            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9;">Risk Limits</div>
+            <div style="font-size: 0.75rem; font-weight: 600; opacity: 0.9; color: #ffffff;">Risk Limits</div>
             <div style="font-size: 0.7rem; color: #00ff00; font-weight: 700;">● NORMAL</div>
         </div>
     </div>
@@ -672,65 +672,48 @@ st.sidebar.markdown("""
 # Enhanced Performance Metrics Section
 st.sidebar.markdown("""
 <div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
-    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">🎯 Performance</div>
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #ffffff; opacity: 0.9;">🎯 Performance</div>
 </div>
 """, unsafe_allow_html=True)
 
 st.sidebar.markdown("""
-<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border-radius: 12px;
-            padding: 0.8rem;
-            margin-bottom: 0.6rem;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease;">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-            <div style="font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Sharpe Ratio</div>
-            <div style="font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2.14</div>
-        </div>
-        <div style="font-size: 2rem; opacity: 0.3;">📈</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.5rem;">
+    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+                border-radius: 12px;
+                padding: 0.8rem;
+                border-left: 4px solid #667eea;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff;">Sharpe Ratio</div>
+        <div style="font-size: 1.5rem; font-weight: 900; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2.14</div>
+        <div style="font-size: 0.6rem; opacity: 0.6; margin-top: 0.3rem; color: #cbd5e0;">Institutional</div>
     </div>
-    <div style="margin-top: 0.4rem; font-size: 0.65rem; opacity: 0.6;">Institutional Grade</div>
+    <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+                border-radius: 12px;
+                padding: 0.8rem;
+                border-left: 4px solid #f5576c;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
+        <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff;">Max Drawdown</div>
+        <div style="font-size: 1.5rem; font-weight: 900; color: #f5576c;">-12.3%</div>
+        <div style="font-size: 0.6rem; opacity: 0.6; margin-top: 0.3rem; color: #cbd5e0;">Low Risk</div>
+    </div>
 </div>
 
-<div style="background: linear-gradient(135deg, rgba(245, 87, 108, 0.1) 0%, rgba(245, 87, 108, 0.05) 100%);
-            border-radius: 12px;
-            padding: 0.8rem;
-            margin-bottom: 0.6rem;
-            border-left: 4px solid #f5576c;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-            <div style="font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Max Drawdown</div>
-            <div style="font-size: 1.8rem; font-weight: 900; color: #f5576c;">-12.3%</div>
-        </div>
-        <div style="font-size: 2rem; opacity: 0.3;">📉</div>
-    </div>
-    <div style="margin-top: 0.4rem; font-size: 0.65rem; opacity: 0.6;">Low Risk Profile</div>
-</div>
-
-<div style="background: linear-gradient(135deg, rgba(0, 255, 0, 0.1) 0%, rgba(0, 200, 0, 0.05) 100%);
+<div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
             border-radius: 12px;
             padding: 0.8rem;
             margin-bottom: 0.6rem;
             border-left: 4px solid #00ff00;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-            <div style="font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem;">Win Rate</div>
-            <div style="font-size: 1.8rem; font-weight: 900; color: #00ff00;">67.8%</div>
-        </div>
-        <div style="font-size: 2rem; opacity: 0.3;">🎯</div>
-    </div>
-    <div style="margin-top: 0.4rem; font-size: 0.65rem; opacity: 0.6;">Above Average</div>
+    <div style="font-size: 0.65rem; opacity: 0.7; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; color: #ffffff;">Win Rate</div>
+    <div style="font-size: 1.5rem; font-weight: 900; color: #00ff00;">67.8%</div>
+    <div style="font-size: 0.6rem; opacity: 0.6; margin-top: 0.3rem; color: #cbd5e0;">Above Average</div>
 </div>
 """, unsafe_allow_html=True)
 
 # Enhanced Footer Section
 st.sidebar.markdown("""
 <div style="margin: 1.5rem 0 0.8rem 0; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(102, 126, 234, 0.2);">
-    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #667eea; opacity: 0.8;">⏰ System Info</div>
+    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: #ffffff; opacity: 0.9;">⏰ System Info</div>
 </div>
 """, unsafe_allow_html=True)
 
