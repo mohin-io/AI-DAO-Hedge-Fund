@@ -175,9 +175,9 @@ st.markdown("""
         background: transparent;
     }
 
-    /* Sidebar text color fixes */
+    /* Sidebar text color fixes - enhanced for maximum visibility */
     section[data-testid="stSidebar"] .stMarkdown {
-        color: #e0e0e0;
+        color: #ffffff !important;
     }
 
     section[data-testid="stSidebar"] h1,
@@ -188,7 +188,12 @@ st.markdown("""
     }
 
     section[data-testid="stSidebar"] p {
-        color: #cbd5e0;
+        color: #ffffff !important;
+    }
+
+    /* Ensure all regular text in sidebar is white, but preserve inline styles */
+    section[data-testid="stSidebar"] div:not([style*="background"]):not([style*="gradient"]) {
+        color: #ffffff;
     }
 
     /* Radio button styling for better visibility */
@@ -225,10 +230,32 @@ st.markdown("""
         font-weight: 600;
     }
 
-    /* Radio button text color */
+    /* Radio button text color - multiple selectors for maximum coverage */
     section[data-testid="stSidebar"] .stRadio label span {
         color: #ffffff !important;
         font-size: 0.95rem;
+    }
+
+    section[data-testid="stSidebar"] .stRadio label p {
+        color: #ffffff !important;
+        font-size: 0.95rem;
+    }
+
+    section[data-testid="stSidebar"] .stRadio label div {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stSidebar"] .stRadio [role="radio"] + div {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stSidebar"] .stRadio div[data-baseweb="radio"] ~ * {
+        color: #ffffff !important;
+    }
+
+    /* Force white color on all text within radio buttons */
+    section[data-testid="stSidebar"] .stRadio * {
+        color: #ffffff !important;
     }
 
     /* Metrics in sidebar - enhanced contrast */
