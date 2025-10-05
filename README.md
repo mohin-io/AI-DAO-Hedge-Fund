@@ -1,4 +1,4 @@
-# 🤖⛓️📈 Decentralized Autonomous Hedge Fund (AI DAO)
+# 🤖⛓️📈 Decentralized Autonomous Hedge Fund AI DAO
 
 > **Next-Generation Finance**: Where AI Agents, Blockchain Governance, and Explainable AI Converge
 
@@ -13,7 +13,7 @@
 
 ### 🎮 [**Streamlit Agentic App**](https://ai-dao-hedge-fund.streamlit.app) 🎮
 
-**Full-Featured AI DAO Control Center**
+**Full-Featured Decentralized Autonomous Hedge Fund AI DAO Control Center**
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live-FF4B4B?style=for-the-badge&logo=streamlit)](https://ai-dao-hedge-fund.streamlit.app)
 

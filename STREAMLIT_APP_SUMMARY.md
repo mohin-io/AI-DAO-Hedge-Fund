@@ -313,7 +313,7 @@ Updated with prominent Streamlit app links:
 
 ## 🎉 Success!
 
-The **AI DAO Hedge Fund Streamlit Agentic App** is:
+The **Decentralized Autonomous Hedge Fund AI DAO Streamlit Agentic App** is:
 
 ✅ **Fully Built** - 18 files, 8 pages, 20,000+ lines
 ✅ **Tested Locally** - App starts without errors
@@ -330,7 +330,7 @@ The **AI DAO Hedge Fund Streamlit Agentic App** is:
 1. **Push to GitHub**
    ```bash
    git add .
-   git commit -m "Complete Streamlit agentic app for AI DAO Hedge Fund"
+   git commit -m "Complete Streamlit agentic app for Decentralized Autonomous Hedge Fund AI DAO"
    git push origin main
    ```
 

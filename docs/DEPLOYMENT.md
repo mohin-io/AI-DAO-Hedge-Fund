@@ -1,6 +1,6 @@
-# Deployment Guide - AI DAO Hedge Fund
+# Deployment Guide - Decentralized Autonomous Hedge Fund AI DAO
 
-Complete guide for deploying the AI DAO Hedge Fund system to production.
+Complete guide for deploying the Decentralized Autonomous Hedge Fund AI DAO system to production.
 
 ---
 

@@ -1,4 +1,4 @@
-# 🎮 AI DAO Hedge Fund - Streamlit Agentic App
+# 🎮 Decentralized Autonomous Hedge Fund AI DAO - Streamlit Agentic App
 
 ## 📋 Overview
 

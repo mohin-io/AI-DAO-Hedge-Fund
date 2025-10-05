@@ -258,7 +258,7 @@ simulations/
 
 ### 7.1 README.md Structure
 ```markdown
-# AI DAO Hedge Fund 🤖⛓️📈
+# Decentralized Autonomous Hedge Fund AI DAO 🤖⛓️📈
 
 ## 🎯 Problem
 Traditional hedge funds lack transparency. By 2030, autonomous AI + blockchain will democratize finance.

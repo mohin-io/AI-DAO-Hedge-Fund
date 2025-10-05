@@ -1,5 +1,5 @@
 /**
- * AI DAO Hedge Fund - Mobile App
+ * Decentralized Autonomous Hedge Fund AI DAO - Mobile App
  * Main Application Entry Point
  */
 
@@ -55,7 +55,7 @@ export default function App() {
           <Tab.Screen
             name="Home"
             component={HomeScreen}
-            options={{ title: 'AI DAO Fund' }}
+            options={{ title: 'Decentralized Autonomous Hedge Fund AI DAO' }}
           />
           <Tab.Screen
             name="Portfolio"

@@ -12,7 +12,7 @@
 # If not already a git repository
 git init
 git add .
-git commit -m "Add Streamlit app for AI DAO Hedge Fund"
+git commit -m "Add Streamlit app for Decentralized Autonomous Hedge Fund AI DAO"
 
 # Push to GitHub
 git remote add origin https://github.com/YOUR_USERNAME/AI-DAO-Hedge-Fund.git
@@ -136,4 +136,4 @@ If deployment fails:
 
 ---
 
-**Ready to deploy?** Follow the 3 steps above and your AI DAO Hedge Fund app will be live in minutes!
+**Ready to deploy?** Follow the 3 steps above and your Decentralized Autonomous Hedge Fund AI DAO app will be live in minutes!

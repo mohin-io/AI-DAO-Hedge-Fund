@@ -1,6 +1,6 @@
-# Contributing to AI DAO Hedge Fund
+# Contributing to Decentralized Autonomous Hedge Fund AI DAO
 
-Thank you for your interest in contributing to the AI DAO Hedge Fund project! This document provides guidelines for contributing.
+Thank you for your interest in contributing to the Decentralized Autonomous Hedge Fund AI DAO project! This document provides guidelines for contributing.
 
 ## 🎯 How to Contribute
 

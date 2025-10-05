@@ -1,6 +1,6 @@
 # 🎨 Streamlit App Visual Preview
 
-## Live Demo: AI DAO Hedge Fund
+## Live Demo: Decentralized Autonomous Hedge Fund AI DAO
 
 **Access the stunning interactive dashboard:**
 

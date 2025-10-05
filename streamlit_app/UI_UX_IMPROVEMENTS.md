@@ -1,4 +1,4 @@
-# UI/UX Improvements - AI DAO Hedge Fund Streamlit App
+# UI/UX Improvements - Decentralized Autonomous Hedge Fund AI DAO Streamlit App
 
 ## Overview
 

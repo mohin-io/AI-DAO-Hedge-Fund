@@ -1,5 +1,5 @@
 """
-Home page for AI DAO Hedge Fund Streamlit app
+Home page for Decentralized Autonomous Hedge Fund AI DAO Streamlit app
 """
 
 import streamlit as st
@@ -10,7 +10,7 @@ def render():
     """Render the home page"""
 
     # Main header
-    st.markdown('<h1 class="main-header">🤖⛓️📈 AI DAO Hedge Fund</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🤖⛓️📈 Decentralized Autonomous Hedge Fund AI DAO</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Decentralized Autonomous Hedge Fund powered by Multi-Agent RL and Blockchain DAO</p>', unsafe_allow_html=True)
 
     # Quick stats with consistent sizing

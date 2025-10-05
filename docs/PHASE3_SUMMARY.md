@@ -1,6 +1,6 @@
 # 🚀 Phase 3 Complete - Advanced AI Features
 
-## AI DAO Hedge Fund - Phase 3 Summary
+## Decentralized Autonomous Hedge Fund AI DAO - Phase 3 Summary
 
 **Completion Date**: October 4, 2025
 **Repository**: https://github.com/mohin-io/AI-DAO-Hedge-Fund

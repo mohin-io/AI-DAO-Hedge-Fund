@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI DAO Hedge Fund Streamlit app includes **fully functional download and export capabilities**, allowing users to save portfolio reports, performance metrics, and trade logs directly to their device.
+The Decentralized Autonomous Hedge Fund AI DAO Streamlit app includes **fully functional download and export capabilities**, allowing users to save portfolio reports, performance metrics, and trade logs directly to their device.
 
 ---
 
@@ -40,7 +40,7 @@ The AI DAO Hedge Fund Streamlit app includes **fully functional download and exp
 
 **Sample Content:**
 ```html
-🤖⛓️📈 AI DAO Hedge Fund
+🤖⛓️📈 Decentralized Autonomous Hedge Fund AI DAO
 Decentralized Autonomous Hedge Fund - Portfolio Report
 Generated: 2025-10-04 18:30:45
 
@@ -158,7 +158,7 @@ Export Timestamp,2025-10-04 18:30:45,
 
 **Sample CSV Structure:**
 ```csv
-# AI DAO Hedge Fund - Trade Log Export
+# Decentralized Autonomous Hedge Fund AI DAO - Trade Log Export
 # Generated: 2025-10-04 18:30:45
 # Total Trades: 10
 
@@ -375,7 +375,7 @@ If you encounter issues with exports:
 
 ## 🎉 Summary
 
-The AI DAO Hedge Fund Streamlit app provides **institutional-grade export capabilities**:
+The Decentralized Autonomous Hedge Fund AI DAO Streamlit app provides **institutional-grade export capabilities**:
 
 ✅ **3 Export Types**: HTML reports, Metrics CSV, Trade log CSV
 ✅ **Professional Formatting**: Beautiful HTML with embedded styling

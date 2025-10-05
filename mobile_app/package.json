@@ -1,7 +1,7 @@
 {
-  "name": "ai-dao-hedge-fund-mobile",
+  "name": "decentralized-autonomous-hedge-fund-ai-dao-mobile",
   "version": "1.0.0",
-  "description": "Mobile app for AI DAO Hedge Fund - Portfolio monitoring and trading",
+  "description": "Mobile app for Decentralized Autonomous Hedge Fund AI DAO - Portfolio monitoring and trading",
   "main": "index.js",
   "scripts": {
     "start": "expo start",

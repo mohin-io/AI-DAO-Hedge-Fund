@@ -1,4 +1,4 @@
-# 🤖⛓️📈 AI DAO Hedge Fund - Streamlit App
+# 🤖⛓️📈 Decentralized Autonomous Hedge Fund AI DAO - Streamlit App
 
 Interactive Streamlit application for the Decentralized Autonomous Hedge Fund powered by Multi-Agent RL and Blockchain DAO.
 

@@ -94,7 +94,7 @@ AI_DAO_TradeLog_20251004_183045.csv
 
 **Contents**:
 ```csv
-# AI DAO Hedge Fund - Trade Log Export
+# Decentralized Autonomous Hedge Fund AI DAO - Trade Log Export
 # Generated: 2025-10-04 18:30:45
 # Total Trades: 10
 

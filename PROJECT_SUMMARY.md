@@ -1,6 +1,6 @@
 # 🎉 Project Completion Summary
 
-## AI DAO Hedge Fund - Decentralized Autonomous Hedge Fund
+## Decentralized Autonomous Hedge Fund AI DAO - Decentralized Autonomous Hedge Fund
 
 **Repository**: https://github.com/mohin-io/AI-DAO-Hedge-Fund
 **Created**: October 4, 2025

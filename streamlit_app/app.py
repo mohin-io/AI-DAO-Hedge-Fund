@@ -1,5 +1,5 @@
 """
-AI DAO Hedge Fund - Streamlit Agentic Application
+Decentralized Autonomous Hedge Fund AI DAO - Streamlit Agentic Application
 Main entry point for the Streamlit-based interactive dashboard with live demo
 """
 
@@ -13,7 +13,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Page configuration
 st.set_page_config(
-    page_title="AI DAO Hedge Fund - Live Demo",
+    page_title="Decentralized Autonomous Hedge Fund AI DAO - Live Demo",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded",

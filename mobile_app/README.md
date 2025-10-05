@@ -1,4 +1,4 @@
-# AI DAO Hedge Fund - Mobile App
+# Decentralized Autonomous Hedge Fund AI DAO - Mobile App
 
 React Native mobile application for portfolio monitoring and trading.
 

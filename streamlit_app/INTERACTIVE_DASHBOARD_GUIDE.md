@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI DAO Hedge Fund Portfolio Dashboard has been transformed into a **highly interactive, dynamic, and professional** interface with advanced features for real-time portfolio monitoring and analysis.
+The Decentralized Autonomous Hedge Fund AI DAO Portfolio Dashboard has been transformed into a **highly interactive, dynamic, and professional** interface with advanced features for real-time portfolio monitoring and analysis.
 
 ---
 

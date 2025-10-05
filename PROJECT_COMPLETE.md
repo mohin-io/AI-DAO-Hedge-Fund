@@ -139,7 +139,7 @@ cd streamlit_app
 1. **Commit**:
    ```bash
    git add .
-   git commit -m "Complete AI DAO Hedge Fund"
+   git commit -m "Complete Decentralized Autonomous Hedge Fund AI DAO"
    git push origin main
    ```
 

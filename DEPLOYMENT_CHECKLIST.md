@@ -15,7 +15,7 @@
 ### Step 1: Commit to Git ⏳
 ```bash
 git add .
-git commit -m "Complete AI DAO Hedge Fund with Streamlit agentic app"
+git commit -m "Complete Decentralized Autonomous Hedge Fund AI DAO with Streamlit agentic app"
 git push origin main
 ```
 

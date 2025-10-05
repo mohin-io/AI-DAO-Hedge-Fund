@@ -2,7 +2,7 @@
 
 ## 🌟 Enhanced Aesthetic Features
 
-The AI DAO Hedge Fund Streamlit app now includes a **stunning, modern, and interactive UI** designed for live demonstrations with institutional-grade aesthetics.
+The Decentralized Autonomous Hedge Fund AI DAO Streamlit app now includes a **stunning, modern, and interactive UI** designed for live demonstrations with institutional-grade aesthetics.
 
 ---
 
@@ -316,7 +316,7 @@ https://ai-dao-hedge-fund.streamlit.app
 - ✅ Click action buttons to demonstrate responsiveness
 
 ### **Key Talking Points**
-- ✅ "This is a **live interactive demo** of our AI DAO Hedge Fund"
+- ✅ "This is a **live interactive demo** of our Decentralized Autonomous Hedge Fund AI DAO"
 - ✅ "Notice the **pulsing live indicator** - system is operational"
 - ✅ "Our **3 AI agents** work together in an ensemble strategy"
 - ✅ "**SHAP analysis** provides full transparency on every trade"
