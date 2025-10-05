@@ -68,11 +68,6 @@ streamlit run app.py
 
 ## 🎯 Try These Features
 
-### For Recruiters/Investors
-1. **Home** → View system architecture
-2. **Portfolio Dashboard** → See real-time metrics
-3. **Backtesting Results** → Check performance (34.2% return, 2.14 Sharpe)
-
 ### For Technical Evaluation
 1. **AI Agents Control** → Explore ML configurations
 2. **Explainability** → See SHAP waterfall plots

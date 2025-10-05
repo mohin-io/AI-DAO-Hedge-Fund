@@ -352,9 +352,7 @@ The **AI DAO Hedge Fund** is a production-ready, full-stack decentralized hedge 
 3. Live demos deployed ✅
 4. Comprehensive testing ✅
 5. Full documentation ✅
-6. Ready for recruiters ✅
-7. Ready for investors ✅
-8. Ready for production use ✅
+6. Ready for production use ✅
 
 **Completion Levels**:
 - **MVP**: 100% ✅
@@ -418,19 +416,6 @@ The **AI DAO Hedge Fund** is a production-ready, full-stack decentralized hedge 
 2. 📝 Write blog post
 3. 🤝 Share with recruiters
 4. ⭐ Get GitHub stars
-
-### For Recruiters/Investors:
-
-**Quick Links**:
-- **Live Demo**: https://ai-dao-hedge-fund-demo.vercel.app/live
-- **GitHub**: https://github.com/mohin-io/AI-DAO-Hedge-Fund
-- **Documentation**: See README.md
-
-**Key Files to Review**:
-- README.md - Project overview
-- ALL_PHASES_COMPLETE.md - Completion report
-- simulations/plots/ - Professional visualizations
-- streamlit_app/ - Full interactive app
 
 ---
 

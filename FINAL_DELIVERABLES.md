@@ -221,16 +221,6 @@ docker run -p 8501:8501 ai-dao-streamlit
 
 ## 🎯 Use Cases Covered
 
-### For Recruiters/Investors
-✅ **View Live Demos**:
-- Streamlit: https://ai-dao-hedge-fund.streamlit.app
-- React: https://ai-dao-hedge-fund-demo.vercel.app/live
-
-✅ **Explore Features**:
-- Portfolio performance dashboard
-- Historical backtesting results
-- AI explainability (SHAP)
-
 ### For Technical Evaluation
 ✅ **Review Code**:
 - Smart contracts with 100% test coverage
@@ -301,12 +291,6 @@ docker run -p 8501:8501 ai-dao-streamlit
 - Comprehensive documentation
 - Multiple deployment options
 - Professional UI/UX
-
-### 4. **Recruiter Ready**
-- Live demos accessible instantly
-- Clear performance metrics
-- Well-documented codebase
-- Easy to understand architecture
 
 ---
 

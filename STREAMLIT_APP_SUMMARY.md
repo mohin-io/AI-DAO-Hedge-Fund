@@ -230,11 +230,6 @@ streamlit run app.py
 
 ## 🎯 Use Cases
 
-### For Recruiters/Investors
-✅ **Home** → System overview
-✅ **Portfolio Dashboard** → Real-time performance
-✅ **Backtesting Results** → Historical metrics (34.2% return, 2.14 Sharpe)
-
 ### For Technical Evaluation
 ✅ **AI Agents Control** → ML configurations (PPO, DQN, SAC)
 ✅ **Explainability** → SHAP waterfall plots
@@ -324,7 +319,7 @@ The **AI DAO Hedge Fund Streamlit Agentic App** is:
 ✅ **Tested Locally** - App starts without errors
 ✅ **Production Ready** - Deployment files in place
 ✅ **Well Documented** - 4 comprehensive guides
-✅ **Recruiter Friendly** - Professional UI with live demos
+✅ **Professional UI** - Clean interface with live demos
 
 ---
 

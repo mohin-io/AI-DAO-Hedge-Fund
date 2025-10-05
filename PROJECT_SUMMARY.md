@@ -368,8 +368,6 @@ npx hardhat deploy --network sepolia
 
 ## 🏆 Why This Project Stands Out
 
-### For Recruiters & Hiring Managers
-
 1. **Full-Stack ML Engineering**
    - End-to-end system (data → model → deployment)
    - Production-ready code quality
@@ -395,7 +393,6 @@ npx hardhat deploy --network sepolia
    - Comprehensive documentation
    - Clear commit history
    - CI/CD pipeline
-   - Recruiter-friendly README
 
 ---
 
